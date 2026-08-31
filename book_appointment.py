@@ -50,5 +50,6 @@ def book_appointment():
 
 
 # Allows you to test your function directly
+#####
 if __name__ == "__main__":
     book_appointment()
