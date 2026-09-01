@@ -1,0 +1,32 @@
+def assign_triage_room():
+    # Input and validate Severity Level
+    while True:
+        severity_input = input("Enter severity level (1-10): ").strip()
+
+        if severity_input.isdigit():
+            severity = int(severity_input)
+
+            if 1 <= severity <= 10:
+                break
+            else:
+                print("Error: Please enter a number from 1 to 10.")
+        else:
+            print("Error: Please enter a whole number.")
+
+    # Assign room based on severity
+    if severity <= 4:
+        room = "Waiting Room"
+    elif severity <= 7:
+        room = "Room 1"
+    else:
+        room = "Room 2"
+
+    # Display Triage Summary
+    print("\n--- Triage Summary ---")
+    print(f"Severity Level: {severity}")
+    print(f"Assigned Room: {room}")
+
+
+# Example usage:
+if __name__ == "__main__":
+    assign_triage_room()
